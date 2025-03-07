@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Women's Day 🌸</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <div class="container">
+        <!-- Music Player (Centered Round Button) -->
+        <div class="music-player">
+            <button id="playPauseButton">
+                <i class="material-icons">play_circle_outline</i>
+            </button>
+        </div>
+        <audio id="bgMusic" src="assets/music.mp3"></audio>
+
+        <!-- Screen 1: Women's Day Greeting -->
+        <div class="screen active" id="screen1">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="icon">💐</div>
+                <h1 class="glow">Happy Women's Day!</h1>
+                <br>
+                <p>Wishing you a day as beautiful and special as you are 💖</p>
+            </div>
+        </div>
+
+        <!-- Screen 2: Gift Voucher -->
+        <div class="screen" id="screen2">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="icon">🎟️</div>
+                <h1 class="glow">Your Special Gift 🎁</h1>
+                <br>
+                <div class="voucher-box">
+                  <p><strong>Recipient:</strong> Trúc Ngố</p>
+                  <p><strong>Drink:</strong> n (Yakult / Sữa Bắp / Sữa Chua)</p>
+                  <p><strong>How to Claim:</strong> Contact me</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

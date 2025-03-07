@@ -1,0 +1,162 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('assets/bg.png');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 375px; /* Mobile-friendly width */
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Screen Styling */
+.screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 20px;
+  transition: transform 0.7s ease-in-out;
+  transform: translateY(100vh); /* Initially off-screen */
+}
+
+/* Background Overlay for Better Text Visibility */
+.screen::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #BE5985;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+/* Content Styling */
+.screen .content {
+  position: relative;
+  color: white;
+  text-shadow: 2px 2px 6px #973c64, -2px -2px 6px #ea4e8a;
+  padding: 20px;
+  max-width: 95%;
+  z-index: 2;
+}
+
+.screen .icon {
+  font-size: 60px;
+  margin-bottom: 15px;
+  animation: bounce 1.5s infinite alternate ease-in-out;
+}
+
+.screen h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.screen p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #FFEDFA;
+}
+
+/* Smooth transition when active */
+.screen.active {
+  transform: translateY(0);
+}
+
+/* Icon Bouncing Animation */
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-8px); }
+}
+
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e60073, 0 0 20px #e60073, 0 0 25px #e60073, 0 0 30px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 15px #ff4da6, 0 0 20px #ff4da6, 0 0 25px #ff4da6, 0 0 30px #ff4da6, 0 0 35px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+/* Voucher Box - Look Like a Real Gift Card */
+.voucher-box {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px dashed #EC7FA9;
+  border-radius: 10px;
+  padding: 15px;
+  width: 100%;
+  text-align: left;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.voucher-box p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  text-align: justify;
+  text-shadow: 0px 0px 3px #FFB8E0;
+}
+
+/* Music Player (Centered Round Button) */
+.music-player {
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+
+.music-player button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #EC7FA9;
+  border: none;
+  font-size: 24px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.music-player button:hover {
+  background-color: #BE5985;
+  transform: scale(1.1);
+}
